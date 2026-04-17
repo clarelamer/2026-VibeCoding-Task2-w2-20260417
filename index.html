@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucia Lin · Frontend Developer 個人網站</title>
+  <meta name="description" content="這是一個個人品牌網站，用於介紹個人背景、技能、作品集與聯絡方式，展示前端開發能力與專業經驗。">
+  
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     html, body { margin: 0; padding: 0; max-width: 100%; }
@@ -14,24 +17,252 @@
     .col-12 { grid-column: span 12; }
     @media (min-width: 768px) { .col-md-6 { grid-column: span 6; } }
     .card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.04); }
+   <style>
+    /* CSS:BASE-START */
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #0f172a;
+      color: #e5e7eb;
+    }
+
+    .page {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .section {
+      padding: 64px 0;
+    }
+
+    .section-title {
+      margin-bottom: 16px;
+      font-size: 24px;
+      color: #22d3ee;
+    }
+
+    p {
+      margin-bottom: 12px;
+    }
+
+    a {
+      color: #22d3ee;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      background-color: #020617;
+      border-bottom: 1px solid #1e293b;
+      z-index: 10;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 56px;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 16px;
+      color: #22d3ee;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .nav-link {
+      font-size: 14px;
+    }
+
+    footer {
+      padding: 24px 0;
+      text-align: center;
+      border-top: 1px solid #1e293b;
+      font-size: 14px;
+    }
+    /* CSS:BASE-END */
+
+    /* CSS:HERO-START */
+    .section-hero {
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: 28px;
+      margin-bottom: 16px;
+    }
+
+    .hero-image {
+      margin: 24px 0;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    /* CSS:HERO-END */
+
+    /* CSS:ABOUT-START */
+    .section-about {
+    }
+    /* CSS:ABOUT-END */
+
+    /* CSS:SKILLS-START */
+    .section-skills {
+    }
+    /* CSS:SKILLS-END */
+
+    /* CSS:PROJECTS-START */
+    .section-projects {
+    }
+    /* CSS:PROJECTS-END */
+
+    /* CSS:CONTACT-START */
+    .section-contact {
+    }
+    /* CSS:CONTACT-END */
+
+    /* CSS:RWD-START */
+    @media (min-width: 768px) {
+      .nav-link {
+        font-size: 16px;
+      }
+
+      .hero-title {
+        font-size: 36px;
+      }
+
+      .section {
+        padding: 80px 0;
+      }
+
+      .section-about .container,
+      .section-projects .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+        align-items: center;
+      }
+    }
+    /* CSS:RWD-END */
   </style>
 </head>
-<body>
-  <header class="container" role="banner">
-    <nav aria-label="主選單">
-      <a href="#about">關於我</a>
-      <a href="#projects">作品集</a>
-      <a href="https://example.com/blog">技術部落格</a>
-      <a href="mailto:me@example.com">聯絡我</a>
-    </nav>
-    <h1>你好，我是Lucia：前端工程師新手之路</h1>
-    <h1>你好，我是Lucia：前端工程師新手之路</h1>
-    <p>歡迎來到我的個人網站！這裡整理了學習紀錄、Side Project 與實作心得。</p>
-  </header>
 
-  <footer class="container" role="contentinfo">
-    <p>© 2025 My Portfolio · <a href="#">GitHub</a></p>
-    <img src="https://source.unsplash.com/600x200/?technology,abstract" alt="">
-  </footer>
+<body>
+  <div class="page">
+
+    <header class="site-header">
+      <div class="container nav">
+        <div class="logo">Yao Lin · Frontend Dev</div>
+        <nav class="nav-links">
+          <a class="nav-link" href="#hero">首頁</a>
+          <a class="nav-link" href="#about">關於我</a>
+          <a class="nav-link" href="#skills">技能</a>
+          <a class="nav-link" href="#projects">作品集</a>
+          <a class="nav-link" href="#contact">聯絡我</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+
+      <!-- SECTION:HERO-START -->
+      <section id="hero" class="section section-hero">
+        <div class="container">
+          <h1 class="hero-title">這裡是個人品牌網站的主視覺區（Hero Section）</h1>
+
+          <div class="hero-image">
+            <img src="https://source.unsplash.com/800x600/?developer,laptop" alt="在筆電前撰寫程式碼的前端開發者" loading="lazy">
+          </div>
+
+          <p>這裡未來會放一句話自我介紹，以及核心職稱（例如 Frontend Developer），並搭配簡潔有力的個人定位。</p>
+          <p>也會加入行動呼籲（例如瀏覽作品集或下載履歷），讓訪客可以快速了解你並採取下一步行動。</p>
+          
+        </div>
+      </section>
+      <!-- SECTION:HERO-END -->
+
+      <!-- SECTION:ABOUT-START -->
+      <section id="about" class="section section-about" aria-labelledby="about-heading">
+        <div class="container">
+          <h2 id="about-heading" class="section-title">關於我（之後會用 Section SDD 替換）</h2>
+          <p>這裡目前是 About 區的占位內容，未來會介紹個人背景、經歷與價值主張。</p>
+          
+        </div>
+      </section>
+      <!-- SECTION:ABOUT-END -->
+
+      <!-- SECTION:SKILLS-START -->
+      <section id="skills" class="section section-skills">
+        <div class="container">
+          <h2 class="section-title">技能</h2>
+          <p>這裡目前是 Skills 區的占位內容，未來會列出前端技術棧與工具能力。</p>
+         
+        </div>
+      </section>
+      <!-- SECTION:SKILLS-END -->
+
+      <!-- SECTION:PROJECTS-START -->
+      <section id="projects" class="section section-projects">
+        <div class="container">
+          <h2 class="section-title">作品集</h2>
+          <p>這裡目前是 Projects 區的占位內容，未來會展示專案案例與成果。</p>
+          
+        </div>
+      </section>
+      <!-- SECTION:PROJECTS-END -->
+
+      <!-- SECTION:CONTACT-START -->
+      <section id="contact" class="section section-contact">
+        <div class="container">
+          <h2 class="section-title">聯絡我</h2>
+          <p>這裡目前是 Contact 區的占位內容，未來會提供 Email、社群與聯絡方式。</p>
+          <p>你可以先透過以下方式聯絡：</p>
+          <p>
+            <a href="mailto:hello@example.com">Email</a> |
+            <a href="tel:+886900000000">電話</a> |
+            <a href="https://github.com/yourname">GitHub</a> |
+            <a href="https://www.linkedin.com/in/yourname">LinkedIn</a>
+          </p>
+          
+        </div>
+      </section>
+      <!-- SECTION:CONTACT-END -->
+
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>© 2026 Yao Lin · Frontend Developer. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </div>
 </body>
 </html>
